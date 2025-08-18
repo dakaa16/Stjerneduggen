@@ -1,0 +1,19 @@
+﻿<div class="title-screen-container">
+    <img src="@ImageSource" alt="Title Screen Background" class="title-screen-image" />
+    <div class="title-screen-overlay"></div>
+    <div class="title-container">
+        <h2 class="title-screen-pre-title">@PreTitle</h2>
+        <h1 class="title-screen-title">@Title</h1>
+    </div>
+    
+</div>
+
+@code {
+    [Parameter, EditorRequired]
+    public required string ImageSource { get; set; }
+    [Parameter, EditorRequired]
+    public required string Title { get; set; }
+    [Parameter, EditorRequired]
+    public required string PreTitle { get; set; }
+
+}

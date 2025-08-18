@@ -1,0 +1,109 @@
+﻿
+.flex-container {
+    display: flex; /* Creates a flexbox container */
+    gap: 20px; /* Adds space between the paragraph and image */
+}
+
+    .flex-container .image-style {
+        max-width: 40%; /* Sets a maximum width for the image */
+        height: auto; /* Ensures the image maintains aspect ratio */
+        border-radius: 5px; /* Optional: adds rounded corners */
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Adds a subtle shadow */
+    }
+
+.eye-catcher-card {
+    width: 100%;
+    padding: 6rem 2rem;
+    background-color: #fefefe;
+    color: #222;
+    text-align: center;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    margin-top: 6rem;
+    margin-bottom: 6rem;
+}
+
+.eye-catcher-title {
+    font-size: 4rem;
+    font-weight: 800;
+    margin-bottom: 1.5rem;
+    line-height: 1.2;
+}
+
+.eye-catcher-title2 {
+    font-size: 3rem;
+    font-weight: 800;
+    margin-bottom: 1.5rem;
+    line-height: 1.2;
+}
+
+.eye-catcher-subtitle {
+    font-size: 1.5rem;
+    max-width: 800px;
+    margin: 0 auto;
+    line-height: 1.6;
+    color: #555;
+}
+
+.text-image-wrap {
+    overflow: hidden; /* Clearfix alternative */
+}
+
+.float-img {
+    float: right;
+    margin-left: 20px;
+    margin-bottom: 10px;
+    width: 40%; /* or auto */
+    min-width: 300px;
+    border-radius: 5px;
+    height: auto;
+}
+
+@media (max-width: 900px) {
+    .float-img {
+        float: none;
+        width: 80%;
+        display: block;
+        margin: 0 auto 20px auto;
+    }
+    .eye-catcher-title {
+        font-size: 1.8rem;
+        font-weight: 800;
+        margin-bottom: 1.5rem;
+        line-height: 1.2;
+    }
+
+    .eye-catcher-title2 {
+        font-size: 1.8rem;
+    }
+
+    }
+
+.image-gallery-container {
+    text-align: center;
+}
+
+/* Style for each image block (text + image) */
+.image-gallery-block {
+    margin-bottom: 40px;
+}
+
+/* Style for the caption text */
+.image-gallery-caption {
+    font-size: 1.1em;
+    font-weight: 500;
+    color: #444;
+    margin-bottom: 10px;
+    max-width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: left;
+    padding-left: 12px;
+}
+
+    .image-gallery-container .image-style {
+        max-width: 80%; /* Sets a maximum width for the image */
+        height: auto; /* Ensures the image maintains aspect ratio */
+        border-radius: 5px; /* Optional: adds rounded corners */
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Adds a subtle shadow */
+        margin: 20px;
+    }

@@ -1,0 +1,22 @@
+﻿@page "/routine"
+@using StjerneDuggen.Components
+@using StjerneDuggen.Services
+@inject MarkdownToHtmlService MarkdownToHtmlService
+
+<ScrollReset />
+
+<PageTitle>Vores hverdag</PageTitle>
+
+<div class="header-div">
+	<h1>Vores hverdag</h1>
+</div>
+
+<div class="content-div">
+	<h3>Generelt</h3>
+	<p>@routineStart</p>
+	<p>@routineEnd</p>
+
+	<h3>En typisk dag</h3>
+	<p>@typicalDay</p>
+</div>
+

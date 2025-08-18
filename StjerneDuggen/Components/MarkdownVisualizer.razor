@@ -1,0 +1,25 @@
+﻿@using StjerneDuggen.Services
+@inject MarkdownToHtmlService MarkdownToHtmlService
+
+<div>
+	@if (MarkdownContent is null)
+	{
+		<p>Loading content...</p>
+	}
+	else
+	{
+		@MarkdownContent
+	}
+</div>
+
+@code {
+	[Parameter, EditorRequired]
+	public required string MarkdownSource { get; set; }
+	private MarkupString? MarkdownContent;
+
+	protected override async Task OnInitializedAsync()
+	{
+		MarkdownContent = await MarkdownToHtmlService.LoadMarkdownAsync(MarkdownSource);
+		StateHasChanged();
+	}
+}

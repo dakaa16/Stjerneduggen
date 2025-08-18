@@ -1,0 +1,53 @@
+﻿@page "/practical"
+@using StjerneDuggen.Components
+@using StjerneDuggen.Services
+@inject MarkdownToHtmlService MarkdownToHtmlService
+
+<ScrollReset />
+
+<PageTitle>Praktisk info</PageTitle>
+
+<div class="header-div">
+	<h1>Praktisk info</h1>
+</div>
+
+<div class="content-div">
+    <h3>Åbningstider</h3>
+    <p>Stjerneduggen har åbent 6.30 -16.00 mandag til torsdag og 6.30 – 15.30 fredag</p>
+
+    <h3>Adresse</h3>
+    <p>Stjerneduggen befinder sig på <a href="https://maps.app.goo.gl/VSbZLRHpSmDTGDKR6" target="_blank">Vestergade 30, 5560 Aarup</a></p>
+
+    <h3>Aldersgruppe</h3>
+    <p>@allowedAge</p>
+
+    <h3>Antal børn</h3>
+    <p>@childrenAmount</p>
+
+    <h3>Indkøring</h3>
+    <p>@StartUp</p>
+
+    <h3>Søvn</h3>
+    <p>@Sleep</p>
+
+    <h3>Tøj og bleer</h3>
+    <p>@ClothesAndDiapers</p>
+
+    <h3>Udeliv og påklædning</h3>
+    <p>@OutdoorAndClothing</p>
+    <ul>
+        <li>To sæt overtøj (fx regntøj, flyverdragt, termotøj)</li>
+        <li>Flere sæt skiftetøj som passer til sæsonen</li>
+        <li>@footwear</li>
+        <li>Hovedbeklædning og andet tilbehør som passer til årstiden (Hue, vanter, solhat)</li>
+    </ul>
+
+    <h3>Sygdom</h3>
+    <p>@Sick</p>
+
+	<h3>Ferie og lukkedage</h3>
+	<p>@holiday</p>
+
+    <h3>Allergier og særlige hensyn</h3>
+    <p>@allergy</p>
+</div>    
