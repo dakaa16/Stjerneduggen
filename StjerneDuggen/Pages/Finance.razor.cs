@@ -14,8 +14,5 @@ Tilskuddet bliver udbetalt direkte til jer som forældre, og I afregner selv det
 Bemærk: Kommunen yder kun tilskud til ét privat pasningstilbud ad gangen, og barnet må ikke samtidig være indskrevet i kommunal institution. 
 
 Prisen vil en gang årligt blive revurderet for at følge kommunens tilskud. Der vil desuden blive taget højde for inflation eller yderligere uddannelse i form af kurser. I tilfælde af prisændringer vil forældrene blive informeret 3 måneder før ændringen træder i kræft.   ";
-
-        private string financeCovering =
-            @"";
     }
 }

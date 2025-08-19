@@ -5,7 +5,7 @@ namespace StjerneDuggen.Components
 {
     public partial class ScrollReset : ComponentBase
     {
-        [Inject] private IJSRuntime JS { get; set; }
+        [Inject] private IJSRuntime JS { get; set; } = default!;
 
         protected override async Task OnAfterRenderAsync(bool firstRender)
         {
