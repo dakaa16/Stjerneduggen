@@ -1,7 +1,7 @@
 {
   "mainAssemblyName": "StjerneDuggen",
   "resources": {
-    "hash": "sha256-mC+loMyZvGGozNezuy2BtyPCO/05XvyFukZfduAQyYU=",
+    "hash": "sha256-5wzwR2nKjAmRYNiCAbj6ipL7LFhQofNFPrePaJc4bEE=",
     "jsModuleNative": {
       "dotnet.native.js": "sha256-O/NCYcAN9uPocD7ns7AzF/cqx7f5vL1PTJCQs0vEXyk="
     },
@@ -211,10 +211,10 @@
       "mscorlib.wasm": "sha256-RLW/7NVuhoPfq151II3kX2kWHgBwQgpCw9aemQNg3to=",
       "netstandard.wasm": "sha256-lAg5WvTiA8wbsIwlr51xh0YWpXT9F5EX3Cnv+11O/mU=",
       "System.Private.CoreLib.wasm": "sha256-3O3muuRQwoLRecYRjfIFWUURvTjP4EmD2O8wYg2UDNY=",
-      "StjerneDuggen.wasm": "sha256-ZsieMZ1oZozKpVZU3Z5H5okbLOrea4DUQasd4VHsT3A="
+      "StjerneDuggen.wasm": "sha256-epBQW1Uif8JckwdFzZUfiS8vDOTrknwYco6hyZp2FRU="
     },
     "pdb": {
-      "StjerneDuggen.pdb": "sha256-n1sg1vYlAiYtl0xJpiPEDEnNpRXOmmHe+QjZ8j78ARM="
+      "StjerneDuggen.pdb": "sha256-KzvRuZd+qui1Dfme5L7csbPzx8sT7AiMpdXtdM40nRU="
     }
   },
   "cacheBootResources": true,
