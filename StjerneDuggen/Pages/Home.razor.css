@@ -76,7 +76,10 @@
         font-size: 1.8rem;
     }
 
+    .eye-catcher-subtitle {
+        font-size: 1.2rem;
     }
+}
 
 .image-gallery-container {
     text-align: center;
@@ -97,7 +100,6 @@
     margin-left: auto;
     margin-right: auto;
     text-align: left;
-    padding-left: 12px;
 }
 
     .image-gallery-container .image-style {

@@ -117,8 +117,8 @@ code {
 }
 
 .content-div {
-    margin-left: clamp(60px, 10vw, 250px);
-    margin-right: clamp(60px, 10vw, 250px);
+    margin-left: clamp(16px, 10vw, 250px);
+    margin-right: clamp(16px, 10vw, 250px);
     margin-top: 40px;
     margin-bottom: 40px;
 }
@@ -155,11 +155,18 @@ h3 {
 /* Paragraph Styling */
 p {
     font-size: 1.1em;
-    line-height: 2.5; /* Ample line spacing for readability */
+    line-height: 1.8; /* Ample line spacing for readability */
     color: #4F4F4F; /* Soft, neutral dark gray */
     padding: 0;
     text-shadow: 0.5px 0.5px #E0F7FA; /* Light dew-drop glow */
     white-space: pre-line;
+}
+
+td {
+    font-size: 1.1em;
+    line-height: 1.8; /* Ample line spacing for readability */
+    color: #4F4F4F; /* Soft, neutral dark gray */
+    text-shadow: 0.5px 0.5px #E0F7FA; /* Light dew-drop glow */
 }
 
 /* List Styling */

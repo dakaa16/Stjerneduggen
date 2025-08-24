@@ -20,8 +20,6 @@ Frem til foråret 2026 kan man indskrives allerede som toårig da jeg har et bar
         private string Sleep =
             @"Hver dag holdes der Siesta for alle børn efter frokost (ca. kl. 12-12.30) Dette giver de børn der har behov for at sove mulighed for at falde i søvn da der er ro og dem der ikke længere har behov for at sove, vil få en lille pause hvor der er ro både for ørene og i kroppen.";
 
-        private string ClothesAndDiapers  =
-            @"Vi vil opholde os meget ude i alt slags vejr og bliver muligvis beskidte eller våde så det anbefales at have flere sæt af overtøj og en fuld kasse med skiftetøj som passer til sæsonen. Det er jeres egen opgave som forældre at medbringe både skiftetøj, overtøj, fodtøj og bleer efter behov.";
 
         private string OutdoorAndClothing =
             @"I Stjerneduggen er vi ude hver dag – året rundt. Vi leger, går på opdagelse, og bruger naturen som læringsrum. Derfor er det vigtigt, at jeres barn har praktisk, varmt og vandtæt tøj, som må blive beskidt og vådt.

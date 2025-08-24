@@ -3,10 +3,10 @@
     public partial class Home
     {
         private string whatIsSD =
-            @"Stjerneduggen er en lille, tryg pasningsordning i Aarup med plads til 4-5 børn. Her er hverdagen fyldt med leg, motorik, musik og dejlige oplevelser i naturen. Jeg lægger vægt på at skabe en rolig og hjemlig atmosfære, hvor der er tid til nærvær og til at følge hvert enkelt barns nysgerrighed og unikke udvikling. ";
+            @"Stjerneduggen er en lille, tryg pasningsordning i Aarup med plads til 5 børn. Her er hverdagen fyldt med leg, motorik, musik og dejlige oplevelser i naturen. Jeg lægger vægt på at skabe en rolig og hjemlig atmosfære, hvor der er tid til nærvær og til at følge hvert enkelt barns nysgerrighed og unikke udvikling. ";
 
         private string aboutMeP1 =
-            @"Mit navn er Rikke, og jeg står bag pasningsordningen Stjerneduggen. Jeg bor sammen med min mand og vores to børn i Aarup. Jeg er uddannet pædagog med erfaring fra daginstitution og familieliv – og jeg brænder for at skabe et roligt, stabilt og kærligt miljø, hvor både børn og forældre kan føle sig hjemme. 
+            @"Mit navn er Rikke, og jeg står bag pasningsordningen Stjerneduggen. Jeg bor sammen med min mand og vores to børn i Aarup. Jeg er uddannet pædagog siden januar 2020 med erfaring fra daginstitution og familieliv – og jeg brænder for at skabe et roligt, stabilt og kærligt miljø, hvor både børn og forældre kan føle sig hjemme.  
 
 Jeg er selv glad for at bruge min krop og er ikke bange for at løbe stærkt, klatre i træer eller se lidt fjollet ud når vi leger en god leg. Det er vigtigt for mig at børnene oplever at der er plads til at te sig tosset og udfordre sin krop i trygge rammer. Jeg blev i 2023 uddannet motorikvejleder hos Vends Motorik og naturskole og har derfor en god viden om børns motoriske udvikling.";
 
