@@ -3,6 +3,14 @@
   "WorkspaceRootPath": "C:\\Users\\Bruger\\source\\repos\\StjerneDuggen\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{26AC4FFA-6596-4E7C-85D8-078CDD3627DF}|StjerneDuggen\\StjerneDuggen.csproj|c:\\users\\bruger\\source\\repos\\stjerneduggen\\stjerneduggen\\components\\titlescreen.razor.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
+      "RelativeMoniker": "D:0:0:{26AC4FFA-6596-4E7C-85D8-078CDD3627DF}|StjerneDuggen\\StjerneDuggen.csproj|solutionrelative:stjerneduggen\\components\\titlescreen.razor.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{26AC4FFA-6596-4E7C-85D8-078CDD3627DF}|StjerneDuggen\\StjerneDuggen.csproj|c:\\users\\bruger\\source\\repos\\stjerneduggen\\stjerneduggen\\components\\titlescreen.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{26AC4FFA-6596-4E7C-85D8-078CDD3627DF}|StjerneDuggen\\StjerneDuggen.csproj|solutionrelative:stjerneduggen\\components\\titlescreen.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Bruger\\source\\repos\\StjerneDuggen\\.gitignore||{3B902123-F8A7-4915-9F01-361F908088D0}",
       "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:.gitignore||{3B902123-F8A7-4915-9F01-361F908088D0}"
     }
@@ -27,6 +35,32 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
+              "Title": "TitleScreen.razor.css",
+              "DocumentMoniker": "C:\\Users\\Bruger\\source\\repos\\StjerneDuggen\\StjerneDuggen\\Components\\TitleScreen.razor.css",
+              "RelativeDocumentMoniker": "StjerneDuggen\\Components\\TitleScreen.razor.css",
+              "ToolTip": "C:\\Users\\Bruger\\source\\repos\\StjerneDuggen\\StjerneDuggen\\Components\\TitleScreen.razor.css",
+              "RelativeToolTip": "StjerneDuggen\\Components\\TitleScreen.razor.css",
+              "ViewState": "AgIAABUAAAAAAAAAAAAAACIAAAAcAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
+              "WhenOpened": "2025-08-24T12:02:14.778Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "TitleScreen.razor",
+              "DocumentMoniker": "C:\\Users\\Bruger\\source\\repos\\StjerneDuggen\\StjerneDuggen\\Components\\TitleScreen.razor",
+              "RelativeDocumentMoniker": "StjerneDuggen\\Components\\TitleScreen.razor",
+              "ToolTip": "C:\\Users\\Bruger\\source\\repos\\StjerneDuggen\\StjerneDuggen\\Components\\TitleScreen.razor",
+              "RelativeToolTip": "StjerneDuggen\\Components\\TitleScreen.razor",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-08-24T12:02:11.183Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
               "Title": ".gitignore",
               "DocumentMoniker": "C:\\Users\\Bruger\\source\\repos\\StjerneDuggen\\.gitignore",
               "RelativeDocumentMoniker": ".gitignore",
