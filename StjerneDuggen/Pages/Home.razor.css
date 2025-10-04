@@ -44,6 +44,12 @@
     color: #555;
 }
 
+.fb-wrapper {
+    max-width: 500px;
+    width: 100%;
+    margin: 0 auto;
+}
+
 .text-image-wrap {
     overflow: hidden; /* Clearfix alternative */
 }

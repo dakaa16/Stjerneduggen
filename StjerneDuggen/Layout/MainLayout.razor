@@ -5,16 +5,27 @@
         <NavMenu />
     </div>
 
+    @* Used for Facebook *@
+    <div id="fb-root"></div>
+    <script async defer crossorigin="anonymous" src="https://connect.facebook.net/da_DK/sdk.js#xfbml=1&version=v23.0&appId=APP_ID"></script>
+
     <main class="body-wrapper">
         <div class="body-content">
             @Body
         </div>
         <footer class="footer">
+            @* <img src="/resources/images/GrassFooter1.png" alt="Footer Background" class="footer-image" /> *@
             <div class="footer-content">
-                <div class="contact">
-                    <a href="tel:+4561657702">Telefon: +45 61 65 77 02</a>
+                <div class="footer-column">
+                    <h3>Læs også om:</h3>
+                    <NavLink style="color: #f7f7eb; margin: 5px 0;" href="">Hjem - Om Stjerneduggen</NavLink>
+                    <NavLink style="color: #f7f7eb; margin: 5px 0;" href="routine">Vores hverdag</NavLink>
+                    <NavLink style="color: #f7f7eb; margin: 5px 0;" href="finance">Finansiering</NavLink>
+                    <NavLink style="color: #f7f7eb; margin: 5px 0;" href="registration">Indskrivning</NavLink>
+                    <NavLink style="color: #f7f7eb; margin: 5px 0;" href="practical">Praktisk info</NavLink>
                 </div>
-                <div class="company-info">
+                <div class="footer-column">
+                    <a href="tel:+4561657702">Telefon: +45 61 65 77 02</a>
                     <a href="https://maps.app.goo.gl/VSbZLRHpSmDTGDKR6" target="_blank">Adresse: Vestergade 30, 5560 Aarup</a>
                 </div>
             </div>
