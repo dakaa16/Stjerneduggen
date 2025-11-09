@@ -1,0 +1,50 @@
+﻿@page "/thoughts"
+@using StjerneDuggen.Components
+
+<ScrollReset />
+
+<PageTitle>Pædagogiske Tanker</PageTitle>
+
+<div class="header-div">
+	<h1>Pædagogiske Tanker</h1>
+</div>
+
+<div class="content-div">
+	<h3>Generelt</h3>
+	<p>@strategyP1</p>
+	<ul>
+		<li> Faste rytmer og genkendelige rutiner </li>
+		<li> Et trygt og roligt miljø fyldt med omsorg </li>
+		<li> Plads til det enkelte barns personlighed og kvaliteter </li>
+		<li> Leg ude og inde i stimulerende, sikre omgivelser </li>
+		<li> Musik, natur og fordybelse i børnehøjde </li>
+		<li> Respektfuld kommunikation og et tæt samarbejde med jer som forældre </li>
+	</ul>
+	<p>@strategyP2</p>
+
+	<h3>Farlig leg</h3>
+	<p>@strategyP3</p>
+
+	<h3>Udviklingen i hverdagen</h3>
+	<p>@strategyP4</p>
+</div>
+
+@code{
+	private string strategyP1 =
+	@"I pasningsordningen Stjerneduggen vægter vi både struktur og spontanitet højt. Det vigtigste er, at børnene får lov til at lege, lære og udvikle sig – og det sker bedst i glade, trygge rammer hvor børn kan mærke at deres tanker og ideer har værdi.
+
+I hverdagen lægger vi vægt på:  ";
+
+	private string strategyP2 =
+	@"Børn trives i det genkendelige og forudsigelige. Derfor har vi faste rutiner, spisetider og en naturlig rytme i løbet af dagen. Samtidig har børn også brug for at kunne følge deres nysgerrighed og undersøge verden i nuet. Udvikling og læring kan ikke altid planlægges – og nogle dage skrider tiderne, fordi vi er opslugt af en leg, en regnorm eller en samtale der betyder noget. Det er en balancegang: Hvornår holder man fast i det planlagte – og hvornår giver man slip og følger strømmen? I Stjerneduggen fokuserer vi på at lytte og være opmærksom, så hvert enkelt barn får de bedste forudsætninger for trivsel, læring og livsglæde. ";
+
+	private string strategyP3 =
+	@"I Stjerneduggen får børnene lov til at prøve sig selv af. Det er vigtigt, at der er plads til den 'farlige leg' – altså den leg, hvor man mærker suget i maven, balancerer lidt på kanten og opdager, hvad man kan og tør. Det handler ikke om at presse børn ud i noget de ikke er klar til – men at de får lov til at udforske grænser; både de fysiske og dem der sidder indeni. Det er her børn udvikler sig, finder styrke og lærer nyt om sig selv. Der er forskel på hvad det enkelte barn opfatter som farligt og derfor også forskel på hvilken støtte det enkelte barn har behov for. Nogle børn skal klatre til toppen af det højeste træ for at mærke suget i maven, mens andre bliver rigeligt udfordret ved at træde op på den lavest siddende gren. Det er derfor vigtigt at have tanke for hvad den farlige leg er for det enkelte barn og hjælpe med for nogle langsom at skubbe grænsen uden at overtræde den og for andre at holde igen når den “farlige leg” ikke kan blive farlig nok.  
+
+Når et barn vover sig ud i det ukendte, står jeg altid klar. jeg guider, støtter, hjælper og træder til, hvis noget bliver for svært. For det man ikke kan endnu, skal der være plads til at lære. ";
+
+	private string strategyP4 =
+	@"Børnene vil blive inddraget i forskellige gøremål, som bagning, madlavning, rengøring og lignende. For børn er det nogen anser som kedelige voksen-opgaver, en vigtig læringsplatform. Da det er med til at lærer dem både gode vaner og vigtige færdigheder til deres senere liv. Det er desuden godt for børns selvværd at blive inddraget da det giver dem en følelse af vigtighed og uundværlighed i et fællesskab. Opgaverne vil dog altid være legende og i børnehøjde, da børns læring og udvikling sker gennem leg. Et eksempel på inddragelse af børnene i hygiejne kunne være: Kom børn nu skal vi give legetøjet skumbad.
+
+  ";
+}

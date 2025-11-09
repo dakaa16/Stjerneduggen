@@ -1,0 +1,64 @@
+﻿.carousel-container {
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* viewport clips */
+.carousel-viewport {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    position: relative;
+}
+
+/* track: 3 slots each 50% of container => total width 150% */
+.carousel-track {
+    display: flex;
+    width: 150%;
+    height: 100%;
+    /* default rest transform (we set inline via style in component) */
+    transform: translateX(-33.333333%);
+}
+
+    /* animate transform only when .animating is present */
+    .carousel-track.animating {
+        transition: transform 0.6s ease-in-out;
+    }
+
+/* each slot takes 50% of the container */
+.carousel-slot {
+    width: 50%;
+    height: 100%;
+    box-sizing: border-box;
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* image sizing (handles tall/wide/square) */
+.carousel-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    border-radius: 10px;
+}
+
+
+/* responsive */
+@media (max-width: 640px) {
+    .carousel-container {
+        border-radius: 12px;
+    }
+
+    .carousel-slot {
+        padding: 6px;
+    }
+}

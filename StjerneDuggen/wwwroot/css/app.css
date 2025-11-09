@@ -189,3 +189,32 @@ li {
 p.tight-bottom {
     margin-bottom: 0.3em;
 }
+
+.image-gallery-container {
+    text-align: center;
+}
+
+/* Style for each image block (text + image) */
+.image-gallery-block {
+    margin-bottom: 40px;
+}
+
+/* Style for the caption text */
+.image-gallery-caption {
+    font-size: 1.1em;
+    font-weight: 500;
+    color: #444;
+    margin-bottom: 10px;
+    max-width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: left;
+}
+
+    .image-gallery-container .image-style {
+        max-width: 80%; /* Sets a maximum width for the image */
+        height: auto; /* Ensures the image maintains aspect ratio */
+        border-radius: 5px; /* Optional: adds rounded corners */
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Adds a subtle shadow */
+        margin: 20px;
+    }

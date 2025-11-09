@@ -1,0 +1,48 @@
+﻿@page "/inside"
+@using StjerneDuggen.Components
+@using StjerneDuggen.Services
+
+<ScrollReset />
+
+<PageTitle>Indendørs Omgivelser</PageTitle>
+
+<div class="header-div">
+	<h1>Indendørs Omgivelser</h1>
+</div>
+
+<div class="content-div">
+	<div class="image-gallery-block">
+		<p class="image-gallery-caption"><b>Børnebord:</b> Til alle måltider eller til diverse aktiviteter hvor vi har brug for at sidde ved et bord, bruger vi et lille børnebord dekoreret med motiver, der hver repræsenterer et emne vi arbejder med i løbet af deres tid i stjerneduggen. Det vil give god anledning til at snakke om emnerne vi arbejder med og hyggesnak under måltider eller andre aktiviteter som foregår ved bordet. </p>
+		<div class="image-gallery-container">
+			<ImageFocusToggler ImageSource="@ServerContentResolver.GetImageUrl("Table")" />
+		</div>
+	</div>
+
+	<div class="image-gallery-block">
+		<p class="image-gallery-caption"><b>Legekøkken:</b> For at indbyde til rollelege som far mor og børn, restaurant, købmand og lignende har vi et lille legekøkken med komfur, håndvask og køleskab og fryser.</p>
+		<div class="image-gallery-container">
+			<ImageFocusToggler ImageSource="@ServerContentResolver.GetImageUrl("PlayKitchenOpen")" />
+		</div>
+	</div>
+
+	<div class="image-gallery-block">
+		<p class="image-gallery-caption"><b>Læse hjørne:</b> Pasningsordningen er indrettet med et lille hyggeligt læsehjørne hvor man kan sidde og slappe af med en god bog enten for sig selv eller med en god ven. </p>
+		<div class="image-gallery-container">
+			<ImageFocusToggler ImageSource="@ServerContentResolver.GetImageUrl("ReadingCorner")" />
+		</div>
+	</div>
+
+	<div class="image-gallery-block">
+		<p class="image-gallery-caption"><b>Køkken:</b> Børnene vil være med i køkkenet til enten at skære frugt, bage boller eller gøre klar til frokost og lignende.</p>
+		<div class="image-gallery-container">
+			<ImageFocusToggler ImageSource="@ServerContentResolver.GetImageUrl("Kitchen")" />
+		</div>
+	</div>
+
+@* 	<div class="image-gallery-block">
+		<p class="image-gallery-caption"><b>Entreen:</b> I kommer ind i entreen, vil børnene have deres egen krog til at hænge deres overtøj på og en kasse til skiftetøj. Her kan børnene øve sig i selv at hænge deres overtøj op og sætte deres fodtøj pænt på plads. Grundet fjernvarmen er garderoben dog ikke helt færdiggjort. Efter fjernvarmen er lagt ind vil garderobepladserne blive opgraderet.</p>
+		<div class="image-gallery-container">
+			<ImageFocusToggler ImageSource="@ServerContentResolver.GetImageUrl("ImageToCome")" />
+		</div>
+	</div> *@
+</div>

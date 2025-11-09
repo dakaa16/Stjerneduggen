@@ -1,0 +1,109 @@
+﻿@using Microsoft.AspNetCore.Components
+@implements IDisposable
+
+<div class="carousel-container">
+    <div class="carousel-viewport">
+        <div class="carousel-track @(_isAnimating ? "animating" : "")"
+             style="transform: translateX(@(Math.Round(_translate, 6))%);">
+            @foreach (var url in _trackUrls)
+            {
+                <div class="carousel-slot">
+                    <img src="@url" loading="lazy" class="carousel-image" alt="" />
+                </div>
+            }
+        </div>
+    </div>
+</div>
+
+@code {
+    [Parameter] public List<string> ImageUrls { get; set; } = new();
+    [Parameter]
+    public string BackgroundImage { get; set; } =
+        "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='1' height='1'%3E%3Crect fill='%23efefef' width='1' height='1'/%3E%3C/svg%3E";
+    [Parameter] public int Interval { get; set; } = 3000;
+    [Parameter] public int AnimationMs { get; set; } = 600; // matches CSS transition
+
+    private System.Timers.Timer? _timer;
+    private int _n => ImageUrls?.Count ?? 0;
+
+    // logical index of the image currently on the RIGHT visible slot
+    private int _rightIndex = 0;
+
+    // track urls: [incoming (off-left), left (visible), right (visible)]
+    private List<string> _trackUrls = new() { "", "", "" };
+
+    // Important percent values are relative to the TRACK element (not container).
+    // Track width = 150% of container (3 * 50%), so to shift by -50% of the container
+    // translate = (-50 / 150) * 100 = -33.333333... of the track.
+    private const double _restTranslateTrackPercent = -100.0 / 3.0; // -33.3333333...
+    private const double _animTargetTrackPercent = 0.0;              // 0%
+
+    // current translate (in percent of track)
+    private double _translate = _restTranslateTrackPercent;
+    private bool _isAnimating = false;
+
+    protected override void OnInitialized()
+    {
+        if (_n == 0)
+            return;
+        BuildTrack();
+        StartTimer();
+    }
+
+    private void BuildTrack()
+    {
+        // right = current right visible image
+        int right = Normalize(_rightIndex);
+        int left = Normalize(right - 1);
+        int incoming = Normalize(left - 1);
+
+        _trackUrls = new()
+        {
+            ImageUrls[incoming],
+            ImageUrls[left],
+            ImageUrls[right]
+        };
+
+        // ensure resting translate is correct (no animation)
+        _translate = _restTranslateTrackPercent;
+    }
+
+    private int Normalize(int i) => ((_n == 0) ? 0 : ((i % _n) + _n) % _n);
+
+    private void StartTimer()
+    {
+        if (_n <= 1)
+            return;
+        _timer = new System.Timers.Timer(Interval);
+        _timer.Elapsed += async (_, __) => await InvokeAsync(RotateAsync);
+        _timer.AutoReset = true;
+        _timer.Start();
+    }
+
+    private async Task RotateAsync()
+    {
+        if (_isAnimating || _n <= 1)
+            return;
+
+        _isAnimating = true;
+
+        // Animate from rest (-33.333% of track) to 0% of track (slides all 3 to the right)
+        _translate = _animTargetTrackPercent;
+        StateHasChanged();
+
+        // wait for the CSS transition to finish
+        await Task.Delay(AnimationMs);
+
+        // Update logical index: left image becomes the new right
+        _rightIndex = Normalize(_rightIndex - 1);
+
+        // Rebuild track to reflect the next triple (this sets _translate back to rest value)
+        BuildTrack();
+
+        // Ensure we render the rebuilt track (no animation class active so this snap is invisible)
+        _isAnimating = false;
+        await InvokeAsync(StateHasChanged);
+    }
+
+    public void Dispose() => _timer?.Dispose();
+}

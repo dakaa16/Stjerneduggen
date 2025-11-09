@@ -1,0 +1,21 @@
+﻿<div class="nav-item" @onclick="Navigate" @onmouseover="() => showDropdown = true" @onmouseleave="() => showDropdown = false">
+    <div class="nav-item-main">
+        <span class="link-text">@Item.DisplayText</span>
+        @if (SubItems != null && SubItems.Any())
+        {
+            <span class="arrow">&#9662;</span> <!-- down arrow -->
+        }
+    </div>
+
+    @if (SubItems != null && SubItems.Any())
+    {
+        <div class="nav-dropdown @(showDropdown ? "show" : "")">
+            @foreach (var subItem in SubItems)
+            {
+                <div class="nav-dropdown-item" @onclick="() => NavigateTo(subItem.Href)">
+                    @subItem.DisplayText
+                </div>
+            }
+        </div>
+    }
+</div>

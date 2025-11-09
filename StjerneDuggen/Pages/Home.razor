@@ -1,24 +1,72 @@
 ﻿@page "/"
 @using StjerneDuggen.Components
+@using StjerneDuggen.Services
 
 <ScrollReset />
 
 <PageTitle>Home</PageTitle>
 
-<TitleScreen ImageSource="/resources/images/ToysOnGrass.jpg" PreTitle="Den private pasningsordning" Title=" STJERNEDUGGEN"></TitleScreen>
+<div class="title-screen">
 
-
-<div class="content-div">
+	<div class="image-carusel-container">
+		<ImageCarousel 
+			ImageUrls="@ServerContentResolver.GetImageUrlsFromFolder("ForsideKarusel")"></ImageCarousel>
+	</div>
 
 	<div class="eye-catcher-card">
 		<h2 class="eye-catcher-title">Hvad er Stjerneduggen? </h2>
 		<p class="eye-catcher-subtitle">@whatIsSD</p>
 	</div>
 
+	<div class="value-container" @onclick="@(() => NavigateTo("motorik"))">
+		<div class="eye-catcher-card">
+			<h2 class="eye-catcher-title">Motorik og bevægelse</h2>
+			<p class="eye-catcher-subtitle">Når børn bevæger sig, vågner sanserne, og nysgerrigheden følger med. Motorik er med i alt, hvad vi gør – fra at tage tøj på og gynge, til at tegne, spise og lege. I Stjerneduggen leger vi os til nye færdigheder og små sejre, hvor børnene prøver, udforsker og opdager, hvad deres krop kan. Med støtte, opmuntring og nærvær ved deres side bliver selv de små udfordringer til store glæder.
+				Klik for at læse mere...
+			</p>
+		</div>
+		<div class="eye-catcher-card" @onclick="@(() => NavigateTo("presence-and-safety"))">
+			<h2 class="eye-catcher-title">Nærvær og tryghed</h2>
+			<p class="eye-catcher-subtitle">Nærvær handler om mere end at være sammen – det handler om at være til stede.
+				Her bliver hvert barn set og mødt med varme og tålmodighed, præcis som det er.
+				I trygge rammer får børn tid og plads til at udvikle sig i deres eget tempo – med støtte fra sidelinjen, så de bevarer glæden ved selv at mestre.
+				For når et barn mærker, at det bliver set, forstået og holdt af, vokser både modet og roen.
+				Ægte nærvær og tryghed kan ikke måles i tid – kun mærkes.
+				Klik for at læse mere...
+			</p>
+		</div>
+		<div class="eye-catcher-card" @onclick="@(() => NavigateTo("nature-and-focus"))">
+			<h2 class="eye-catcher-title">Natur og fordybelse</h2>
+			<p class="eye-catcher-subtitle">I Stjerneduggen bruger vi naturen som vores legeplads – et sted, hvor kroppen, sanserne og nysgerrigheden får lov at udfolde sig frit.
+				De naturlige omgivelser støtter en naturlig udvikling, og her lærer børn gennem oplevelse, bevægelse og forundring. I naturens ro finder vi plads til både leg, læring og fordybelse – i verden og i os selv.
+				Klik for at læse mere...
+			</p>
+		</div>
+	</div>
+</div>
+
+
+<div class="content-div">
+
+	<h3>Seneste nyt </h3>
+	<div class="value-container">
+		<div>
+			<p>
+				Da Stjerneduggen er en ny pasningsordning, er der i øjeblikket ledige pladser.
+
+				Frem til foråret 2026 kan børn i alderen 2 år også indskrives.
+			</p>
+		</div>
+		<div class="eye-catcher-card float-img">
+			<div class="fb-wrapper">
+				<div class="fb-page" data-href="https://www.facebook.com/profile.php?id=61581368680952" data-tabs="timeline" data-width="" data-height="" data-small-header="false" data-adapt-container-width="true" data-hide-cover="false" data-show-facepile="true"><blockquote cite="https://www.facebook.com/profile.php?id=61581368680952" class="fb-xfbml-parse-ignore"><a href="https://www.facebook.com/profile.php?id=61581368680952">Stjerneduggen</a></blockquote></div>
+			</div>
+		</div>
+	</div>
 
 	<h3>Om mig</h3>
 	<div class="text-image-wrap">
-		<img src="/resources/images/MeInTree.jpg" alt="Description" class="float-img">
+		<img src="@ServerContentResolver.GetImageUrl("MeInTree")" alt="Description" class="float-img">
 		<p>@aboutMeP1
 			<a href="https://www.motorikognatur.dk/">Motorik og Natur</a>
 		</p>
@@ -26,87 +74,8 @@
 	</div>
 
 	<div class="eye-catcher-card">
-		<h2 class="eye-catcher-title">Seneste nyt </h2>
-		<div class="fb-wrapper">
-			<div class="fb-page" data-href="https://www.facebook.com/profile.php?id=61581368680952" data-tabs="timeline" data-width="" data-height="" data-small-header="false" data-adapt-container-width="true" data-hide-cover="false" data-show-facepile="true"><blockquote cite="https://www.facebook.com/profile.php?id=61581368680952" class="fb-xfbml-parse-ignore"><a href="https://www.facebook.com/profile.php?id=61581368680952">Stjerneduggen</a></blockquote></div>
-		</div>
-	</div>
-
-	<h3>Pædagogiske tanker</h3>
-	<p>@strategyP1</p>
-	<ul>
-		<li> Faste rytmer og genkendelige rutiner </li>
-		<li> Et trygt og roligt miljø fyldt med omsorg </li>
-		<li> Plads til det enkelte barns personlighed og kvaliteter </li>
-		<li> Leg ude og inde i stimulerende, sikre omgivelser </li>
-		<li> Musik, natur og fordybelse i børnehøjde </li>
-		<li> Respektfuld kommunikation og et tæt samarbejde med jer som forældre </li>
-	</ul>
-	<p>Jeg glæder mig til at tage godt imod jer og jeres barn.</p>
-
-	<div class="eye-catcher-card">
 		<h2 class="eye-catcher-title2">Mellem klokkeslæt og kruseduller</h2>
 		<p class="eye-catcher-subtitle">@poem</p>
-	</div>
-
-	<h3>Omgivelser</h3>
-
-	<div class="image-gallery-block">
-		<p class="image-gallery-caption"><b>Baghaven:</b> Her er udstyret med plads til at klatre i vores troldehassel, et legetårnet bestående af et balancebræt, ”kongetrone”, gynger, legehus, lille butiksområde, rutsjebane, og klatrevæg hvor børnene har god mulighed for at udvikle deres grovmotorik og lege mange forskellige både motoriske og rollelege. Vi er i proces med at lave en ny sandkasse som forventes at være klar til september. Når det er koldt, blæser eller regner kan vi enten gå i læ under vores overdækkede terrasse eller i vores skur som er indrettet til at lave forskelligt håndarbejde med værktøj eller legetøj som er udvalgt til at være ude.</p>
-		<div class="image-gallery-container">
-			<ImageFocusToggler ImageSource="/resources/images/PlayTower1.jpg" />
-			<ImageFocusToggler ImageSource="/resources/images/Tree.jpg" />
-		</div>
-	</div>
-
-	<div class="image-gallery-block">
-		<p class="image-gallery-caption"><b>Forhave:</b> Jeg har en stor forhave med en masse plads til at løbe rundt og spille med bold. Der er desuden et drivhus og et lille bed hvor vi i fællesskab vil passe diverse planter som fx rabarber, ærter, kartofler, jordbær, purløg og andet der interesserer os. Forhaven byder også på forskellige frugttræer.</p>
-		<div class="image-gallery-container">
-			<ImageFocusToggler ImageSource="/resources/images/FrontYard.jpg" />
-		</div>
-	</div>
-
-	<div class="image-gallery-block">
-		<p class="image-gallery-caption"><b>Omgivelser:</b> Havelågen i baghaven åbner op ud til tennisklubben og fodboldbanerne som vi også vil komme til at bruge når vi har brug for mere plads til at løbe rundt på. Vi har desuden skoven lige ved siden af, som vi vil bruge til at gå ture i og udforske naturen.</p>
-		<div class="image-gallery-container">
-			<ImageFocusToggler ImageSource="/resources/images/Tennis.jpg" />
-			<ImageFocusToggler ImageSource="/resources/images/Water.jpg" />
-		</div>
-	</div>
-
-	<div class="image-gallery-block">
-		<p class="image-gallery-caption"><b>Børnebord:</b> Til alle måltider eller til diverse aktiviteter hvor vi har brug for at sidde ved et bord, bruger vi et lille børnebord dekoreret med motiver, der hver repræsenterer et emne vi arbejder med i løbet af deres børnehavetid. Det vil give god anledning til at snakke om emnerne vi arbejder med og hyggesnak under måltider eller andre aktiviteter som foregår ved bordet. </p>
-		<div class="image-gallery-container">
-			<ImageFocusToggler ImageSource="/resources/images/Table.jpg" />
-		</div>
-	</div>
-
-	<div class="image-gallery-block">
-		<p class="image-gallery-caption"><b>Legekøkken:</b> For at indbyde til rollelege som far mor og børn, restaurant, købmand og lignende har vi et lille legekøkken med komfur, håndvask og køleskab og fryser.</p>
-		<div class="image-gallery-container">
-			<ImageFocusToggler ImageSource="/resources/images/PlayKitchenOpen.jpg" />
-		</div>
-	</div>
-
-	<div class="image-gallery-block">
-		<p class="image-gallery-caption"><b>Læse hjørne:</b> Pasningsordningen er indrettet med et lille hyggeligt læsehjørne hvor man kan sidde og slappe af med en god bog enten for sig selv eller med en god ven. </p>
-		<div class="image-gallery-container">
-			<ImageFocusToggler ImageSource="/resources/images/ReadingCorner.jpg" />
-		</div>
-	</div>
-
-	<div class="image-gallery-block">
-		<p class="image-gallery-caption"><b>Køkken:</b> Børnene vil være med i køkkenet til enten at skære frugt, bage boller eller gøre klar til frokost og lignende.</p>
-		<div class="image-gallery-container">
-			<ImageFocusToggler ImageSource="/resources/images/Kitchen.jpg" />
-		</div>
-	</div>
-
-	<div class="image-gallery-block">
-		<p class="image-gallery-caption"><b>Entreen:</b> I kommer ind i entreen, vil børnene have deres egen krog til at hænge deres overtøj på og en kasse til skiftetøj. Her kan børnene øve sig i selv at hænge deres overtøj op og sætte deres fodtøj pænt på plads. Grundet fjernvarmen er garderoben dog ikke helt færdiggjort. Efter fjernvarmen er lagt ind vil garderobepladserne blive opgraderet.</p>
-		<div class="image-gallery-container">
-			<ImageFocusToggler ImageSource="/resources/images/ImageToCome.jpg" />
-		</div>
 	</div>
 
 	<div class="eye-catcher-card">

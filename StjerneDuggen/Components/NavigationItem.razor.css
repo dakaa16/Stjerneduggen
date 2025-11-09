@@ -1,0 +1,177 @@
+﻿.nav-container {
+    display: flex;
+    align-items: center;
+    height: 100%;
+    gap: 0; /* absolutely no gaps */
+}
+
+.nav-item {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    height: 100%;
+    z-index: 2001;
+    transition: background-color 0.2s ease;
+    padding: 0 1.2rem;
+}
+
+    /* keep centered half-height separator */
+    .nav-item::after {
+        content: "";
+        position: absolute;
+        right: 0;
+        top: 25%;
+        height: 50%;
+        width: 1px;
+        background-color: rgba(0, 0, 0, 0.15);
+        pointer-events: none; /* let hover pass through */
+    }
+
+    .nav-item:last-child::after {
+        display: none;
+    }
+
+/* center content */
+.nav-item-main {
+    display: flex;
+    align-items: center;
+    gap: 0.3rem;
+}
+
+/* fix hover gap: put background behind separator via ::before layer */
+.nav-item::before {
+    content: "";
+    position: absolute;
+    inset: 0; /* cover entire area */
+    background-color: rgba(0, 0, 0, 0);
+    transition: background-color 0.2s ease;
+    z-index: -1; /* keep below text and border */
+}
+
+.nav-item:hover::before {
+    background-color: rgba(0, 0, 0, 0.05);
+}
+
+/* dropdown same as before */
+.nav-dropdown {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: #fdf8f1;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.15);
+    display: none;
+    flex-direction: column;
+    width: 100%; /* 👈 now matches the parent item’s width */
+    box-sizing: border-box; /* include borders/padding in width calc */
+    z-index: 2001;
+    border: 1px solid rgba(0, 0, 0, 0.05);
+    border-top: none;
+}
+
+    .nav-dropdown.show {
+        display: flex;
+    }
+
+.nav-dropdown-item {
+    padding: 0.5rem 1rem;
+    white-space: nowrap;
+    transition: background 0.2s;
+}
+
+    .nav-dropdown-item:hover {
+        background-color: #e0e9dc;
+    }
+
+.link-text {
+    font-size: 1rem;
+    font-weight: 200;
+    line-height: 1.2;
+    color: #48381B;
+    letter-spacing: 1px;
+}
+
+.arrow {
+    font-size: 1rem;
+    font-weight: 200;
+    line-height: 1.2;
+    color: #48381B;
+    letter-spacing: 3px;
+}
+
+@media (max-width: 900px) {
+    /* stack main + dropdown */
+    .nav-item {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        height: auto;
+        padding: 0;
+        border-bottom: none;
+        position: relative;
+    }
+
+    /* main item */
+    .nav-item-main {
+        width: 100%;
+        padding: 1rem 1.5rem;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        position: relative;
+        /* border-bottom if has subitems */
+        border-bottom: 1px solid rgba(0,0,0,0.1);
+        box-sizing: border-box;
+    }
+
+        /* remove border for items without subitems */
+        .nav-item-main + .nav-dropdown {
+            border-top: none;
+        }
+
+    /* dropdown container */
+    .nav-dropdown {
+        position: static;
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        padding: 0; /* container flush */
+        margin: 0;
+        box-shadow: none;
+        background-color: transparent;
+    }
+
+    /* subitems */
+    .nav-dropdown-item {
+        position: relative;
+        padding: 0.5rem 0;
+        padding-left: 2.5rem; /* indent */
+        font-size: 0.9rem;
+        color: #48381B;
+        letter-spacing: 3px;
+        background-color: transparent;
+        cursor: pointer;
+    }
+
+        /* border above each subitem, except first one */
+        .nav-dropdown-item:not(:first-child)::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 75%;
+            height: 1px;
+            background-color: rgba(0,0,0,0.1);
+        }
+
+        /* optional: last subitem spacing */
+        .nav-dropdown-item:last-child {
+            padding-bottom: 0.25rem;
+        }
+}
+
+
+
+

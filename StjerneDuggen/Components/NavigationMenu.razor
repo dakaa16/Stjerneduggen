@@ -1,0 +1,28 @@
+﻿@using StjerneDuggen.Domain
+@using StjerneDuggen.Services
+<div class="@navClass" id="navWrapper">
+    <div class="nav-inner">
+        <div class="nav-left" @onclick="NavigateHome">
+            <img src="@ServerContentResolver.GetImageUrl("Logo")" alt="Logo" class="nav-logo" />
+        </div>
+        <div class="nav-right">
+            @foreach (var navEntry in NavigationEntries)
+            {
+                <NavigationItem Item="@navEntry.NavigationEntry" SubItems="navEntry.SubEntries" OnItemClicked="CloseMenu"></NavigationItem>
+            }
+        </div>
+
+        <button class="burger-button @(IsMenuOpen ? "active" : "")" @onclick="ToggleMenu">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+
+        <div class="burger-menu @(IsMenuOpen ? "open" : "")">
+            @foreach (var navEntry in NavigationEntries)
+            {
+                <NavigationItem Item="@navEntry.NavigationEntry" SubItems="navEntry.SubEntries" OnItemClicked="CloseMenu"></NavigationItem>
+            }
+        </div>
+    </div>
+</div>
