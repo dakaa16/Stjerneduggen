@@ -1,0 +1,136 @@
+﻿.year-season-card {
+    width: 100%;
+    aspect-ratio: 15 / 10;
+    padding: 2rem 1.5rem;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 100% 100%;
+    border-radius: 14px;
+    box-shadow: 0 6px 16px rgba(0,0,0,0.12);
+    display: flex;
+    flex-direction: column;
+    cursor: pointer;
+    transition: opacity 0.25s ease, transform 0.25s ease;
+}
+
+    /* EXPANDED STATE */
+    .year-season-card.expanded {
+        position: fixed;
+        inset: 16px;
+        z-index: 1000;
+        aspect-ratio: unset;
+        width: auto;
+        height: auto;
+        cursor: default;
+        opacity: 1;
+        transform: scale(1);
+        animation: expandFadeIn 0.25s ease;
+    }
+
+@keyframes expandFadeIn {
+    from {
+        opacity: 0;
+        transform: scale(0.97);
+    }
+
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+    .year-season-card:not(.expanded) {
+        opacity: 1;
+        transform: scale(1);
+    }
+
+/* Centered header */
+.season-title {
+    font-family: 'Pacifico', cursive;
+    font-size: 2.2rem;
+    text-align: center;
+    margin-bottom: 1.25rem;
+    text-shadow: 0 1px 2px rgba(255,255,255,0.85);
+}
+
+/* Semi-transparent white panel */
+.season-content {
+    background-color: rgba(251, 239, 216, 0.72);
+    border-radius: 12px;
+    padding: 1.25rem 1.5rem;
+}
+
+/* Make content scrollable when expanded */
+.year-season-card.expanded .season-content {
+    flex: 1;
+    overflow-y: auto;
+}
+
+/* COLLAPSED MONTH BLOCKS */
+.month-item {
+    padding: 0.75rem 0;
+}
+
+    .month-item:not(:last-child) {
+        border-bottom: 1px solid rgba(0,0,0,0.15);
+    }
+
+/* Month title */
+.month-name {
+    display: block;
+    font-weight: 600;
+    margin-bottom: 0.25rem;
+}
+
+/* Month description */
+.month-description {
+    margin: 0;
+    font-size: 0.95rem;
+    line-height: 1.4;
+}
+
+/* EXPANDED MONTHS */
+.expanded-month {
+    margin-bottom: 2rem;
+}
+
+.expanded-month-title {
+    font-size: 1.4rem;
+    margin-bottom: 0.75rem;
+}
+
+.month-detail {
+    margin-bottom: 1rem;
+}
+
+.detail-title {
+    margin-bottom: 0.25rem;
+    font-weight: 600;
+}
+
+.detail-text {
+    margin: 0;
+    line-height: 1.5;
+}
+
+/* Click hint text */
+.click-text {
+    text-align: center;
+    margin-top: 1rem;
+    text-shadow: 0 1px 2px rgba(255,255,255,0.8);
+}
+
+/* CLOSE BUTTON */
+.close-button {
+    position: absolute;
+    top: 12px;
+    right: 12px;
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    border: none;
+    background: rgba(255,255,255,0.9);
+    font-size: 1.2rem;
+    cursor: pointer;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+}

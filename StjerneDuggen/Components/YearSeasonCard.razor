@@ -1,0 +1,98 @@
+﻿@inject IJSRuntime JS
+
+<div class="year-season-card @(IsExpanded ? "expanded" : "")"
+     style="background-image: url('@BackgroundImage');"
+     @onclick="Expand">
+
+    @if (IsExpanded)
+    {
+        <button class="close-button"
+                @onclick:stopPropagation="true"
+                @onclick="Collapse">
+            ✕
+        </button>
+    }
+
+    <h2 class="season-title" style="color:@TitleColor">
+        @Title
+    </h2>
+
+    <div class="season-content">
+        @if (!IsExpanded)
+        {
+            @foreach (var month in Months)
+            {
+                <div class="month-item">
+                    <span class="month-name" style="color:@SubtitleColor">
+                        @month.Name
+                    </span>
+                    <p class="month-description">@month.Description</p>
+                </div>
+            }
+        }
+        else
+        {
+            @foreach (var month in Months)
+            {
+                <div class="expanded-month">
+                    <h3 class="expanded-month-title"
+                        style="color:@SubtitleColor">
+                        @month.Name
+                    </h3>
+
+                    @foreach (var detail in month.DetailedText)
+                    {
+                        <div class="month-detail">
+                            <h4 class="detail-title" style="color:@TitleColor">@detail.Name</h4>
+                            <p class="detail-text">@detail.DetailedDescription</p>
+                        </div>
+                    }
+                </div>
+            }
+        }
+    </div>
+
+    @if (!IsExpanded)
+    {
+        <p class="click-text" style="color:@ClickTextColor">
+            Klik for at læse mere
+        </p>
+    }
+</div>
+
+@code {
+    private bool IsExpanded;
+
+    [Parameter] public string BackgroundImage { get; set; } = "";
+    [Parameter] public string Title { get; set; } = "";
+    [Parameter] public string TitleColor { get; set; } = "#000";
+    [Parameter] public string SubtitleColor { get; set; } = "#000";
+    [Parameter] public string ClickTextColor { get; set; } = "#000";
+    [Parameter] public List<MonthRecord> Months { get; set; } = new();
+
+    private async Task Expand()
+    {
+        if (IsExpanded)
+            return;
+
+        IsExpanded = true;
+        await JS.InvokeVoidAsync("document.body.classList.add", "modal-open");
+    }
+
+    private async Task Collapse()
+    {
+        IsExpanded = false;
+        await JS.InvokeVoidAsync("document.body.classList.remove", "modal-open");
+    }
+
+    public record MonthRecord(
+        string Name,
+        string Description,
+        List<MonthDetailedText> DetailedText
+    );
+
+    public record MonthDetailedText(
+        string Name,
+        string DetailedDescription
+    );
+}

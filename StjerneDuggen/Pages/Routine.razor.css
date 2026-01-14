@@ -1,0 +1,42 @@
+﻿.side-table{
+    min-width: 430px;
+}
+
+.row-container {
+    display: flex;
+    gap: 20px;
+    flex-direction: row;
+    width: 100%; /* take full available width */
+    justify-content: center; /* keep them centered if content is smaller than container */
+}
+
+
+.column-container {
+    display: flex;
+    gap: 20px;
+    flex-direction: column;
+    width: 100%; /* added so it takes the full width of parent */
+}
+
+
+.year-season-card-container {
+    flex: 1 1 0; /* grow and shrink to fill row */
+    max-width: 45%; /* optional: prevent cards from getting too wide on large screens */
+    justify-content: center;
+    cursor: pointer;
+}
+
+
+@media (max-width: 900px) {
+    .side-table {
+        min-width: auto;
+    }
+
+    .row-container {
+        flex-direction: column;
+    }
+
+    .year-season-card-container {
+        max-width: 100%; /* let cards take full width on mobile */
+    }
+}

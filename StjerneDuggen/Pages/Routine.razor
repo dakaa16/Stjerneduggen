@@ -1,5 +1,6 @@
 ﻿@page "/routine"
 @using StjerneDuggen.Components
+@using StjerneDuggen.Services
 
 <ScrollReset />
 
@@ -14,22 +15,68 @@
 	<p>@routineStart</p>
 	<p>@routineEnd</p>
 
-	<h3>En typisk dag</h3>
+    <h3>En typisk dag</h3>
 
-    <table style="font-family: sans-serif; border-collapse: collapse;">
-        <tbody>
-            <tr><td style="padding-right: 40px;">6.30-7.30</td><td>Morgenmad og rolige aktiviteter</td></tr>
-            <tr><td style="padding-right: 40px;">8.30</td><td>Frugten klargøres i fællesskab i køkkenet</td></tr>
-            <tr><td style="padding-right: 40px;">9.00</td><td>Frugt og snak om dagens indhold</td></tr>
-            <tr><td style="padding-right: 40px;">9.30-10.30</td><td>Dagens planlagte aktivitet</td></tr>
-            <tr><td style="padding-right: 40px;">10.45-11.00</td><td>Tisse og vaske hænder samt dække bord</td></tr>
-            <tr><td style="padding-right: 40px;">11.00</td><td>Frokost</td></tr>
-            <tr><td style="padding-right: 40px;">12.00-12.30</td><td>Siesta</td></tr>
-            <tr><td style="padding-right: 40px;">12.30-14.00</td><td>Dem der ikke sover, går ud og leger.</td></tr>
-            <tr><td style="padding-right: 40px;">14.00</td><td>Eftermiddagsmad</td></tr>
-            <tr><td style="padding-right: 40px;">14.30-16.00</td><td>Leg og afhentning</td></tr>
-        </tbody>
-    </table>
+    <div class="row-container">
+        <div class="side-table">
+            <table style="font-family: sans-serif; border-collapse: collapse;">
+                <tbody>
+                    <tr><td style="padding-right: 40px;">6.30-7.30</td><td>Morgenmad og rolige aktiviteter</td></tr>
+                    <tr><td style="padding-right: 40px;">8.30</td><td>Frugten klargøres i fællesskab i køkkenet</td></tr>
+                    <tr><td style="padding-right: 40px;">9.00</td><td>Frugt og snak om dagens indhold</td></tr>
+                    <tr><td style="padding-right: 40px;">9.30-10.30</td><td>Dagens planlagte aktivitet</td></tr>
+                    <tr><td style="padding-right: 40px;">10.45-11.00</td><td>Tisse og vaske hænder samt dække bord</td></tr>
+                    <tr><td style="padding-right: 40px;">11.00</td><td>Frokost</td></tr>
+                    <tr><td style="padding-right: 40px;">12.00-12.30</td><td>Siesta</td></tr>
+                    <tr><td style="padding-right: 40px;">12.30-14.00</td><td>Dem der ikke sover, går ud og leger.</td></tr>
+                    <tr><td style="padding-right: 40px;">14.00</td><td>Eftermiddagsmad</td></tr>
+                    <tr><td style="padding-right: 40px;">14.30-16.00</td><td>Leg og afhentning</td></tr>
+                </tbody>
+            </table>
+        </div>
 
+        <div class="column-container">
+            <div class="row-container">
+                <div class="year-season-card-container">
+                    <YearSeasonCard BackgroundImage=@ServerContentResolver.GetImageUrl("ForårBaggrund")
+                                    Title="Forår"
+                                    TitleColor="#3A7D44"
+                                    SubtitleColor="#245838"
+                                    ClickTextColor="#245838"
+                                    Months="@springMonths">
+                    </YearSeasonCard>
+                </div>
+                <div class="year-season-card-container">
+                    <YearSeasonCard BackgroundImage=@ServerContentResolver.GetImageUrl("SommerBaggrund")
+                                    Title="Sommer"
+                                    TitleColor="#723218"
+                                    SubtitleColor="#CA5B09"
+                                    ClickTextColor="#FEFEFE"
+                                    Months="@summerMonths">
+                    </YearSeasonCard>
+                </div>
+            </div>
+            <div class="row-container">
+                <div class="year-season-card-container">
+                    <YearSeasonCard BackgroundImage=@ServerContentResolver.GetImageUrl("EfterårBaggrund")
+                                    Title="Efterår"
+                                    TitleColor="#722C14"
+                                    SubtitleColor="#AC3C15"
+                                    ClickTextColor="#FCE9BE"
+                                    Months="@autumnMonths">
+                    </YearSeasonCard>
+                </div>
+                <div class="year-season-card-container">
+                    <YearSeasonCard BackgroundImage=@ServerContentResolver.GetImageUrl("VinterBaggrund")
+                                    Title="Vinter"
+                                    TitleColor="#024E8A"
+                                    SubtitleColor="#022872"
+                                    ClickTextColor="#022872"
+                                    Months="@winterMonths">
+                    </YearSeasonCard>
+                </div>
+            </div>
+        </div>
+    </div>
 </div>
 
