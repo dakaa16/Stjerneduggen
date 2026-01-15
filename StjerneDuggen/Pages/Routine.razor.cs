@@ -9,7 +9,6 @@ namespace StjerneDuggen.Pages
             new("Marts", "Vi følger naturens stille opvågning", new()
                 {
                     new("Foråret begynder at vise sig", SpringSign),
-                    new("Fastelavn", Fastelavn),
                     new("Påskeforberedelser", EsterPrep),  
                     new("Påskefrokost", EsterLunch)
                     
@@ -84,15 +83,14 @@ namespace StjerneDuggen.Pages
             new("Februar", "Vi undrer os og undersøger vinterverdenen", new()
                 {
                     new("Vinter-science", WinterScience),
-                    new("Fastelavnsforberedelser", FastelavnForberedelser)
+                    new("Fastelavn", Fastelavn)
                 })
         };
 
         #region YearCardText
         private const string SpringSign = @"Marts er årets første forårsmåned, og vi går på opdagelse efter forårstegn i naturen. Det kan være vintergækker, der bryder gennem jorden, eller blade og blomster, der så småt begynder at spire. Vi øver os i at se, mærke og sætte ord på de små forandringer omkring os. ";
-        private const string Fastelavn = @"Op til fastelavn taler vi om, hvad fastelavn er, hvorfor vi fejrer den, og hvordan man traditionelt gør. Samtidig giver vi plads til børnenes egne tanker og ønsker, da alle børn har forskellige forestillinger om, hvad der gør en fest tryg og hyggelig. ";
-        private const string EsterPrep = @"Fredagen inden påskeferien holder vi vores egen lille påskefrokost, hvor fællesskab, ro og hyggelige rammer er i centrum. ";
-        private const string EsterLunch = @"Selvom påsken falder i april, begynder vi forberedelserne allerede i marts. Vi laver påskepynt, taler om påskens traditioner og fortællinger og snakker om påskeharen. Samtidig begynder vi at glæde os til vores kyllingeløb.";
+        private const string EsterLunch = @"Fredagen inden påskeferien holder vi vores egen lille påskefrokost, hvor fællesskab, ro og hyggelige rammer er i centrum. ";
+        private const string EsterPrep = @"Selvom påsken falder i april, begynder vi forberedelserne allerede i marts. Vi laver påskepynt, taler om påskens traditioner og fortællinger og snakker om påskeharen. Samtidig begynder vi at glæde os til vores kyllingeløb.";
 
         private const string PlantingIndoor = @"I april planter vi karse og stiller dem, så børnene kan følge med i, hvordan de vokser. Vi smager på karsen og taler om, hvad planter har brug for, for at gro.";
         private const string Chickenrun = @"April bruges også på at forberede vores kyllingeløb. Her inviterer vi familier og andre interesserede fra byen til nogle hyggelige timer i Stjerneduggen. 
@@ -107,7 +105,7 @@ Læs mere ved at kopiere linket til begivenheden på min facebookside: https://f
         private const string WarmNature = @"Maj markerer overgangen mod sommer. Dagene bliver længere, vejret varmere, og naturen mere farverig. Vi bruger uderummet flittigt, går på ture og udforsker naturen med krop, sanser og nysgerrighed.";
 
 
-        private const string Summertime = @"Vi taler om sommeren, mærker varmen og opholder os ofte ude det meste af dagen. Vi går ture i nærområdet, leger i haven og passer de ting, vi har sået i bedene. Sommeren giver os mulighed for fordybelse i leg, natur og fællesskab i et roligt tempo. ";
+        private const string Summertime = @"Vi taler om sommeren, mærker varmen og opholder os ude det meste af dagen. Vi går ture i nærområdet, leger i haven og passer de ting, vi har sået i bedene. Sommeren giver os mulighed for fordybelse i leg, natur og fællesskab i et roligt tempo. ";
         private const string FathersDay = @"Da fars dag ligger i juni, forbereder vi en lille ting til far for at vise ham, hvor vigtig han er. Vi taler sammen om, at fars dag er én bestemt dag, hvor vi har valgt at være ekstra søde ved far – men også om, at man gerne må gøre søde ting for både mor og far alle årets andre dage.";
         private const string MidSummer = @"Vi taler om Sankt Hans og traditionerne omkring dagen. Sammen laver vi vores egen lille heks, som vi brænder på et bål i haven og markerer midsommeren på en tryg og børnevenlig måde.";
         private const string WaterPlay = @"Når solen forhåbentlig har fået godt fat, begynder vi for alvor at lege med vand. Vi leger vandlege, laver vandbaner, vander planter og tager måske et badebassin frem nogle dage. Gennem legen undersøger vi vandets tre stadier og giver børnene kropslige og sanselige erfaringer med naturfænomener.";
@@ -132,7 +130,7 @@ Vi øver os i at mærke efter, hvad vi laver, hvordan vi har det i kroppen, og h
         private const string NatureChange = @"Vi følger naturens forvandling fra sommerens varme til efterårets kølige eventyr. Vi samler blade, hopper i bladbunker, leger med mudder og udforsker vandpytter. 
 Verden bliver til farverige blad regnbuer, skinnende vandpytter og skøre kastanjekreationer – og vi mærker efter, hvordan årstiden ændrer sig både omkring os og i kroppen.";
         private const string CampFire = @"Når temperaturen begynder at falde, tænder vi op i bålfadet og leger med at lave mad over bål. Vi tager også på ture til shelterpladsen i Møllegårdsskoven, hvor vi indimellem holder hyggelige båldage i naturen.";
-        private const string Halloween = @"I oktober arbejder vi med halloween på en tryg og børnevenlig måde. Vi leder efter edderkoppespind i naturen, som vi kan fange på pap og bruge til at skabe en (u)hyggelig stemning.  Vi skærer græskar, bager græskarkerner og leger os ind i efterårets magi. ";
+        private const string Halloween = @"I oktober arbejder vi med halloween på en tryg og børnevenlig måde. Vi laver vores egen halloween pynt, som vi bruger til at skabe en (u)hyggelig stemning.  Vi skærer græskar, bager græskarkerner og leger os ind i efterårets magi. ";
 
 
         private const string PutOnTakeOff = @"I november har efterårets kulde for alvor fået fat, og overtøjet fylder mere i hverdagen. Derfor sætter vi ekstra fokus på selvhjulpenhed i garderoben. 
@@ -150,7 +148,7 @@ Som en del af dagen vil der være små nisseinspirerede aktiviteter, som børn o
 Vi snakker om jul, hvorfor vi fejrer den, og synger julesange sammen. Vi tager i kirke og ser konfirmandernes julekrybbespil sammen med byens børnehaver. 
 
 Vi laver julegaver på børnenes præmisser. Da børnegruppen er lille, bliver det ikke et samlebånd, hvor alle skal lave den samme gave. Allerede i november begynder vi at tale om, hvad man kunne have lyst til at give i julegave til mor, far og eventuelt søskende. 
-Med guidning forsøger vi efter bedste evne at gøre børnenes egne idéer til virkelighed, så de kan give en personlig julegave fra hjertet – fremfor en voksenbestemt gave lavet i tvang.";
+Med guidning forsøger vi efter bedste evne at gøre børnenes egne idéer til virkelighed, så de kan give en personlig julegave fra hjertet.";
         private const string SeeYouNextYear = @"Vi slutter december af med en hyggelig og rolig juleafslutning sammen med forældre og søskende. Her får julegaverne lov at komme med hjem, vi ønsker hinanden god jul og godt nytår, glæder os over det, vi har oplevet sammen, og ser frem mod alt det nye, der venter, når vi ses igen i det nye år.";
         
         
@@ -168,9 +166,8 @@ I denne tid har vi særligt fokus på det sanselige – både inde og ude – og
         private const string WinterScience = @"Vinteren er en oplagt tid til at lege med science. Vi udforsker den magiske verden omkring os gennem eksperimenter og nysgerrige undersøgelser. 
 Vi arbejder med frosne sæbebobler, undersøger hvordan vand fryser til is, laver frosne solfangere og – hvis vi er heldige med sne – snevulkaner og maler i sneen med farvet vand. 
 Måske finder vi en vintergæk og eksperimenterer med at farve den gennem vand. Alt sammen sker i børnehøjde, hvor undren, leg og fælles opdagelser er i centrum.";
-        private const string FastelavnForberedelser = @"Da fastelavn i år falder i marts, bruger vi februar på at gøre os klar. Vi laver hyggelig fastelavnspynt, maler fastelavnstønden og leger med idéer til kostumer. 
-Hvis lysten og evnerne rækker, forsøger vi også at lave kostumer selv – på børnenes præmisser og med de færdigheder, vi hver især har.";
-#endregion
+        private const string Fastelavn = @"Op til fastelavn taler vi om, hvad fastelavn er, hvorfor vi fejrer den, og hvordan man traditionelt gør. Vi laver hyggelig fastelavnspynt, maler fastelavnstønden og leger med idéer til kostumer. Samtidig giver vi plads til børnenes egne tanker og ønsker, da alle børn har forskellige forestillinger om, hvad der gør en fest tryg og hyggelig. ";
+        #endregion
 
 
 
