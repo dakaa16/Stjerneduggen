@@ -1,0 +1,13 @@
+﻿@page "/CurrentEvent"
+<p>Bliver du ikke ført til FaceBook begivenheden automatisk, klik da på nedenstående link:</p>
+<a href="https://www.facebook.com/events/2384576028661921" target="_blank">Kyllingeløb hos Stjerneduggen</a>
+
+@code {
+	[Inject] private NavigationManager Navigation { get; set; } = default!;
+
+	protected override async Task OnInitializedAsync()
+	{
+		Navigation.NavigateTo("https://www.facebook.com/events/2384576028661921", true);
+		await base.OnInitializedAsync();
+	}
+}
