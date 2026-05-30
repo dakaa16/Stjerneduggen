@@ -18,6 +18,7 @@
     cursor: pointer;
     }
 
+
 .title-screen {
     padding: 12px;
     text-align: center;
@@ -93,6 +94,13 @@
     max-width: 500px;
     width: 100%;
     margin: 0 auto;
+    box-sizing: border-box;
+}
+
+.fb-wrapper .fb-page,
+.fb-wrapper .fb-page iframe {
+    width: 100% !important;
+    max-width: 100% !important;
 }
 
 .text-image-wrap {

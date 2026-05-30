@@ -1,6 +1,19 @@
 window.facebookEmbed = (() => {
     let sdkLoadPromise;
 
+    async function waitForLayoutStability() {
+        if (document.fonts && document.fonts.ready) {
+            try {
+                await document.fonts.ready;
+            } catch {
+                // Ignore font-loading failures and continue with parsing.
+            }
+        }
+
+        await new Promise(requestAnimationFrame);
+        await new Promise(requestAnimationFrame);
+    }
+
     function ensureFbRoot() {
         if (document.getElementById("fb-root")) {
             return;
@@ -69,6 +82,7 @@ window.facebookEmbed = (() => {
 
     async function parse(element) {
         const fb = await loadSdk();
+        await waitForLayoutStability();
 
         if (!element) {
             fb.XFBML.parse();
