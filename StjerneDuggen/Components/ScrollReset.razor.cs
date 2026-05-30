@@ -9,7 +9,12 @@ namespace StjerneDuggen.Components
 
         protected override async Task OnAfterRenderAsync(bool firstRender)
         {
-                await JS.InvokeVoidAsync("window.scrollTo", 0, 0);
+            if (!firstRender)
+            {
+                return;
+            }
+
+            await JS.InvokeVoidAsync("scrollReset.resetToTop");
         }
     }
 }

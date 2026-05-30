@@ -1,13 +1,24 @@
-﻿using Microsoft.AspNetCore.Components;
-using StjerneDuggen.Services;
-using static System.Net.Mime.MediaTypeNames;
+using Microsoft.AspNetCore.Components;
+using Microsoft.JSInterop;
+using StjerneDuggen.Components;
 
 namespace StjerneDuggen.Pages
 {
     public partial class Home
     {
+        [Inject] private IJSRuntime JS { get; set; } = default!;
         [Inject] private NavigationManager Navigation { get; set; } = default!;
 
+
+        private ElementReference _facebookEmbedContainer;
+
+        protected override async Task OnAfterRenderAsync(bool firstRender)
+        {
+            if (firstRender)
+            {
+                await JS.InvokeVoidAsync("facebookEmbed.parse", _facebookEmbedContainer);
+            }
+        }
         public void NavigateTo(string url)
         {
             if (!string.IsNullOrEmpty(url))
