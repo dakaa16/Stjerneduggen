@@ -1,4 +1,4 @@
-:root {
+ï»¿:root {
     --nav-height: 20vh;
 }
 
@@ -6,10 +6,13 @@
     position: relative;
     display: flex;
     flex-direction: column;
+    width: 100%;
+    max-width: 100%;
 }
 
 main {
     flex: 1;
+    min-width: 0;
 }
 
 .sidebar {
@@ -87,10 +90,13 @@ main {
     flex-direction: column;
     min-height: 100%;
     background: #FBEFD8;
+    width: 100%;
+    max-width: 100%;
+    overflow-x: hidden;
 }
 
 .body-content {
-    flex: 1; /* Sørger for, at indholdet fylder det resterende rum */
+    flex: 1; /* SÃ¸rger for, at indholdet fylder det resterende rum */
 
 }
 
@@ -175,7 +181,7 @@ main {
 /* Mobile-Friendly Styling */
 @media (max-width: 768px) {
     .footer-content {
-        flex-direction: column; /* Skift til en kolonne-layout på små skærme */
+        flex-direction: column; /* Skift til en kolonne-layout pÃ¥ smÃ¥ skÃ¦rme */
         align-items: center;
         justify-content: space-around;
         gap: 20px;
@@ -190,7 +196,9 @@ main {
     }
 
     .logo img {
-        max-width: 70px; /* Mindre billede på små skærme */
+        max-width: 70px; /* Mindre billede pÃ¥ smÃ¥ skÃ¦rme */
     }
 }
+
+
 
